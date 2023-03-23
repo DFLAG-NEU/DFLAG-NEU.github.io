@@ -1,5 +1,4 @@
 document.writeln("    <div class=\"footer-content\">")
-document.writeln("		<p>访问次数：<a href=\"http://cn.web-counter.net\"> <img src=\"http://www.web-counter.net/count_20091204.php\?c=gUL1MwhplWn\"></a></p>")
 document.writeln("    	<p><a href=\"http://www.neu.edu.cn\">东北大学 计算机科学与工程学院 人工智能系<a></p>")
 document.writeln("    <p style=\"font-size:14px\">Copyright 2023 DFLAG-NEU. All rights reserved.</p>")
 document.writeln("    </br>")
