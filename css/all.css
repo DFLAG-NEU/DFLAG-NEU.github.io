@@ -110,6 +110,14 @@ img{border-style:none; vertical-align: top;}
 	padding: 0px auto;
 	display:table;
 }
+.menu_trigger{
+	width: 31px;
+	height: 31px;
+	right:0;
+	background: url(../images/mobile_menu.png) no-repeat;
+	display: none;
+	position: absolute;
+}
 .logo {
 	text-align:center;
 	font-family: 'novecentosanswide';
