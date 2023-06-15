@@ -1,4 +1,5 @@
 document.writeln("    <div class=\"logo\"><h1>DFLAG-NEU</h1></div>")
+document.writeln("    		<a class=\"menu_trigger\" href=\"#\"></a>")
 document.writeln("    		<nav id=\"nav\">")
 document.writeln("    			<ul>")
 document.writeln("    				<li><a href=\"index.html\">主页</a></li>")
