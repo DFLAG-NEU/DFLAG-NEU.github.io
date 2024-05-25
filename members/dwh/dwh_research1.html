@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="../../title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h3><font size='6px' color='#696969' align='center'><p>What will regularized continuous learning performs if it was used to medical image segmentation: a preliminary analysis</p></font></h3>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><b>Background</b><br>
+				<p>
+				Medical image segmentation (MIS) is vital yet challenging due to object diversity and complexity. Recent years significant progress has been made in this field. However, many MIS methods are image-driven, which makes it possible to either lose generalization capabilities or suffer from catastrophic forgetting when encountering new tasks. Continuous learning (CL) is a class of methods to overcome catastrophic forgetting. 
+				</p>
+				<br>
+				
+				<b>Motivation</b><br>
+				<p>
+				This research solely focuses on domain- incremental CL, as shown in Fig. 1, particularly significant and relevant to MIS due to diverse scanner data. Regularization-based CL (RCL) is an effective type of CL methods. RCL retains essential parameters to mitigate forgetting through regularization constraints. RCL has the advantage of protecting data privacy and ease of deployment, making it particularly suitable for MIS. However, the use of RCL in MIS is relatively unexplored and there is a lack of a unified theoretical expression that captures the diverse regularization adopted by different RCL methods.
+				</p><br>
+				<img src="research1_fig/fig1.png" alt="RL pic" style="width:810px;height:400px;" title="RL" ;="" algin="center">
+				<br><br>
+				</font>
+				
+				<font color="F65353"><b>Our Contributions</b></font><br>
+				
+				<font color='black'><p>
+				To summarize, our main contributions include:
+				<ul>
+				<li>A comprehensive summarization of these 6 RCL methods was undertaken, capturing their essence through a unified Taylor expansion.</li>
+				<li>In the context of domain-incremental CL, we conducted an assessment of the performance of 6 RCL methods in MIS tasks. The evaluation encompassed two representative MIS scenarios, spanning a total of eight datasets.</li>
+				<li>We evaluated the impact of different task orders, diverse model capacities, and various optimizers on these approaches, subsequently discussing the insights gleaned.</li>
+				</p>
+				</ul>
+				<img src="research1_fig/fig2.gif" alt="order" style="width:820px;height:195px;" title="RL" ;="" algin="middle">
+				<br><br>
+				
+				<b>Experiments</b>
+				<p>
+				We provide a unified description of 6 RCL methods (LwF, LwM, EWC, SI, MAS, and PIGWM) using Taylor expansion and investigate their performances in 2 classic MIS scenarios, namely retinal vessel segmentation (RVS) and cardiac left ventricle segmentation (CLVS) on 8 datasets (CHASE, DRHAGIS, RITE and STARE for the former and M&Ms, LVSC, ACDC and SCD for the latter). We also explore the influence of different task orders (easy to hard or hard to easy), optimizers (Adam or SGD), and parameter capacities (2, 3, 4 or 5 down- and up-sampling pairs) on the performance of these methods. Our experimental results show that these methods are capable of mitigating catastrophic forgetting to a certain extent. Comparing to a hard-to-easy order, most of the methods perform better on all of the already known tasks in an easy-to-hard order. Optimizer Adam performs better on RVS and CLVS. Capacity increases are obviously effective for CLVS, but they have no significant impact on RVS.
+				</p><br><br>
+				<img src="research1_fig/fig3.gif" alt="order" style="width:800px;height:220px;" title="RL" ;="" algin="middle">
+				<br><br/>
+				<img src="research1_fig/fig4.gif" alt="result1" style="width:800px;height:200px;" title="RL" ;="" algin="middle">
+				<br><br/>
+				<img src="research1_fig/fig5.gif" alt="result2" style="width:800px;height:200px;" title="RL" ;="" algin="middle">
+				<br><br/>
+				<img src="research1_fig/fig6.gif" alt="result2" style="width:800px;height:200px;" title="RL" ;="" algin="middle">
+				<br><br/>
+				<img src="research1_fig/fig7.gif" alt="result2" style="width:800px;height:200px;" title="RL" ;="" algin="middle">
+				<br>			
+				
+				
+				<br>
+			
+				<b>Sources</b>	
+				<ul>				
+				<li>More detials please see <a href="https://ieeexplore.ieee.org/abstract/document/10385386" target="_blank">our paper.</a></li>
+				
+				<li>The code is available at <a href="https://github.com/dwh649821599/BIBM23-B515" target="_blank">BIBM23-B515</a>.</li>
+				</ul>
+				
+				<br>
+			
+				<b>Citation</b>
+				
+				<p> 	@INPROCEEDINGS{10385386,
+  						author={Dai, Weihao and Feng, Chaolu and Chen, Shuaizheng and Li, Wei and Yang, Jinzhu and Zhao, Dazhe},
+  						booktitle={2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)}, 
+  						title={What will regularized continuous learning performs if it was used to medical image segmentation: a preliminary analysis}, 
+  						year={2023},
+  						pages={1860-1863},
+  						keywords={Image segmentation;Analytical models;Sensitivity analysis;Biological system modeling;Taylor series;Retinal vessels;Complexity theory;Continuous learning;Catastrophic forgetting;Medical image segmentation},
+  						doi={10.1109/BIBM58861.2023.10385386}}
+				</p>
+			
+				</font>
+				<br><br>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="../../title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h3><font size='6px' color='#696969' align='center'><p>Learning discriminative foreground-and-background features for few-shot segmentation</p></font></h3>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><b>Background</b><br>
+				<p>
+				Few-shot Semantic Segmentation (FSS) endeavors to segment novel categories in a query image by referring to a support set comprising only a few annotated examples. Presently, many existing FSS methodologies primarily embrace the prototype learning paradigm and concentrate on optimizing the matching mechanism. </p>
+				<br>
+				
+				<b>Motivation</b><br>
+				<p>
+				However, these approaches tend to overlook the discrimination between the features of foreground background. Consequently, the segmentation results are often imprecise when it comes to capturing intricate structures, such as boundaries and small objects.
+				</p><br>
+				<img src="research1_fig/fig1.png" alt="RL pic" style="width:600px;height:300px;" title="RL" ;="" algin="center"><br>
+				<img src="research1_fig/fig2.png" alt="RL pic" style="width:600px;height:300px;" title="RL" ;="" algin="center"><br>
+				<br><br>
+				</font>
+				
+				<font color="F65353"><b>Our Contributions</b></font><br>
+				
+				<font color='black'><p>
+				In summary, our main contribution can be concluded as follows:
+				<ul>
+				<li>We introduce the Discriminative Foreground and Background feature learning Network (DFBNet) specifically for the FSS problem. To the best of our knowledge, DFBNet is the first model to prioritize the improvement of distinguishability between foreground and background features, leading to more accurate segmentation.</li>
+				<li>We propose two novel modules: the feature separation module (FSM) and the semantic alignment module (SAM). These modules enable the extraction of more discriminative foreground and background information from query images.</li>
+				<li>Our proposed FSS method, DFBNet, achieves state-of-the-art results on both the PASCAL-5i and COCO-20i benchmarks, demonstrating its superiority over existing approaches in the field. </li>
+				</p>
+				</ul>
+				<img src="research1_fig/fig4.png" alt="order" style="width:820px;height:400px;" title="RL" ;="" algin="middle">
+				<br><br>
+				
+				<b>Experiments</b>
+				<p>
+				To showcase the effectiveness and competitiveness of our proposed method, DFBNet, we provide the mean intersection-over-union (mIoU) results for each fold as well as the average mIoU across all folds for both the 1-shot and 5-shot settings on the PASCAL-5i and COCO20i and FSS-1000 datasets. We compare our approach, DFBNet, with the existing state-ofthe-art (SOTA) few-shot segmentation models.
+				</p><br><br>
+				<img src="research1_fig/fig7.png" alt="order" style="width:800px;height:475px;" title="RL" ;="" algin="middle">
+				<br><br/>
+						
+				<img src="research1_fig/fig5.png" alt="order" style="width:700px;height:380px;" title="RL" ;="" algin="middle">
+				<br><br/>
+				<img src="research1_fig/fig6.png" alt="order" style="width:700px;height:475px;" title="RL" ;="" algin="middle">
+				<br><br/>
+				
+				<br>
+			
+				<b>Sources</b>	
+				<ul>				
+				<li>More detials please see <a href="https://link.springer.com/article/10.1007/s11042-023-17708-5" target="_blank">our paper.</a></li>
+				
+				<li>The code is available at <a href="https://github.com/DFLAG-NEU/DFBNet" target="_blank">DFBNet</a>.</li>
+				</ul>
+				
+				<br>
+			
+				<b>Citation</b>
+				
+				<p> @article{jiang2023learning,
+					title={Learning discriminative foreground-and-background features for few-shot segmentation},
+					author={Jiang, Cong and Zhou, Yange and Liu, Zhaoshuo and Feng, Chaolu and Li, Wei and Yang, Jinzhu},
+					journal={Multimedia Tools and Applications},
+					pages={1--21},
+					year={2023},
+					publisher={Springer}
+				  }
+				</p>
+			
+				</font>
+				<br><br>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>
