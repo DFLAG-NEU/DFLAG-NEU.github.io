@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="../../title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h3><font size='6px' color='#696969' align='center'><p>GCReID: Generalized continual person re-identification via meta learning and knowledge accumulation</p></font></h3>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><b>Background</b><br>
+				<p>
+					Person re-identification (ReID) has made good progress in stationary domains. The ReID model must be
+					retrained to adapt to new scenarios (domains) as they emerge unexpectedly, which leads to catastrophic
+					forgetting. Continual learning trains the model in the order of domain emergence to alleviate catastrophic
+					forgetting. 
+					<br>
+					However, continual person ReID performs terribly if it is directly
+					applied to unseen scenarios as shown in Fig. 1. That is to say, its generalization ability is limited due to distributional differences between
+					domains participating in training and domains not. Domain adaptation and domain
+					generalization are helpful for continual person ReID improving its performance on unseen domains.
+					As shown in Fig. 2(a), the standard domain adaptation requires a subset
+					of unseen domains to participate in training to guarantee a better
+					adaptation on the unseen domains. Domain generalization requires
+					multiple domains to participate in training to enhance generalization.
+					That is to say, as shown in Fig. 2(b), source domains have to be
+					accessible in advance at the same time.</p>
+					<img src="research2_fig/fig2.jpg" alt="reid pic" style="width:825px;height:545px;" title="reid" ;="" algin="center">
+				<br>
+				
+				<b>Motivation</b><br>
+				<p>
+					In most cases, scenarios change in order, i.e, source domains arrive with priority as shown
+					in Fig. 2(c) rather than being accessible simultaneously.
+					Continual domain generalization in Fig. 2(c) has to consider not only catastrophic
+					forgetting under the continual learning paradigm (domains arrive with
+					priority), but also the generalizability on unseen domains. Therefore,
+					similar to resisting forgetting existing in a representative of continual
+					learning, meta learning based parameter regularization has been
+					introduced into this field to improve generalization of the model.
+				</p><br>
+	
+				</font>
+				
+				<font color="F65353"><b>Our Contributions</b></font><br>
+				
+				<font color='black'><p>
+					In this paper, we enhance generalization of continual person ReID for the aspect of
+					sample diversity and distribution difference. Our main contributions
+					are summarized as follows.
+				<ul>
+				<li>We simulate unseen domains according to priori to enhance sample diversity.</li>
+				<li>A fully connected graph is proposed to store accumulated knowledge learned from all seen domains and the simulated domains.</li>
+				<li>Meta-train is used to extract new knowledge from the current domain.</li>
+				<li>Meta-test is used to extract potential knowledge from unseen domains which is simulated according to priori.</li>
+				<li>The above knowledge are gathered together to update accumulated knowledge via the graph attention network.</li>
+				<li>We evaluate the proposed method and compare it with 6 representative methods on 12 benchmark datasets.</li>
+				</p>
+				</ul>
+				<img src="research2_fig/fig3.jpg" alt="reid pic" style="width:973px;height:294px;" title="framework" ;="">
+				<br>
+				<img src="research2_fig/framework.jpg" alt="reid pic" style="width:971px;height:377px;" title="framework" ;="">
+				<br><br>
+				
+				<b>Experiments</b>
+				<p>
+				We conduct experiments on 12 person ReID benchmarks, namely Market, CUHKSYSU, DukeMTMC-reID, MSMT17, CUHK03, Grid, SenseReID, CUHK01, CUHK02, VIPER, iLIDS, the mean average precision (mAP) and Rank1 are used to evaluate performance on the datasets.
+				Datasets are downloaded from <a href="https://kaiyangzhou.github.io/deep-person-reid/datasets.html" target="_blank">Torchreid_Dataset_Doc</a>  and <a href="https://github.com/BJTUJia/person_reID_DualNorm" target="_blank">DualNorm</a>.
+				We compare the proposed model GCReID with 7 methods, namely Fine-Tuning (FT), Learning without forgetting (LwF), continual representation learning(CRL), adaptive knowledge accumulation(AKA), continual knowledge preserving (CKP), generalizing without forgetting (GwF), and memory-based multi-source meta-learning (M3L).
+				</p><br><br>
+				<img src="research2_fig/table1.jpg" alt="order" style="width:986px;height:246px;" title="reid" ;="" algin="middle">
+				<br><br/>
+				<img src="research2_fig/table2.jpg" alt="order" style="width:991px;height:233px;" title="reid" ;="" algin="middle">
+				<br><br/>
+				<img src="research2_fig/table5.jpg" alt="result1" style="width:993px;height:240px;" title="reid" ;="" algin="middle">
+				<br><br/>
+				<img src="research2_fig/table6.jpg" alt="result1" style="width:992px;height:226px;" title="reid" ;="" algin="middle">
+				<br><br/>
+				<img src="research2_fig/fig7.jpg" alt="result2" style="width:875px;height:192px;" title="reid" ;="" algin="middle">
+				<br>			
+				
+				
+				<br>
+			
+				<b>Sources</b>	
+				<ul>				
+				<li>More detials please see <a href="https://www.sciencedirect.com/science/article/pii/S0893608024004854" target="_blank">our paper.</a></li>
+				
+				<li>The code is available at <a href="https://github.com/DFLAG-NEU/GCReID" target="_blank">GCReID</a>.</li>
+				<p><b>Citation</b>: The author who uses this code is defaultly considered as agreeing to cite the following reference
+					@article{liu2024gcreid,
+						title={GCReID: Generalized continual person re-identification via meta learning and knowledge accumulation},
+						author={Liu, Zhaoshuo and Feng, Chaolu and Yu, Kun and Hu, Jun and Yang, Jinzhu},
+						journal={Neural Networks},
+						volume={179},
+						pages={106561},
+						year={2024},
+						publisher={Elsevier}
+					  }
+					}</p>
+				</ul>
+				</font>
+				<br><br>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>
