@@ -10,5 +10,6 @@ document.writeln("   				<li><a href=\"books.html\">学术专著与教材</a></l
 document.writeln("   				<li><a href=\"codes.html\">开源代码</a></li>")
 document.writeln("   				<li><a href=\"member.html\">学生信息</a></li>")
 document.writeln("   				<li><a href=\"recruit.html\">招生信息</a></li>")
+document.writeln("   				<li><a href=\"celebration.html\">小组风采</a></li>")
 document.writeln("    			</ul>")
 document.writeln("    		</nav>")
