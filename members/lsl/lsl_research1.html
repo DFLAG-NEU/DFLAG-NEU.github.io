@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="../../title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h2><font size='6px' color='#696969' align='center'><p>The plan to release the dataset</p></font></h2>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><h3><b>How people can assess it?</b></h3><br>
+				<p>
+					You can download the agreement from here.  Please make sure that a permanent/long-term responsible person (e.g., professor) fills in the agreement with a handwriting signature.  After filling it, please send the electrical version to our Email: fengchaolu at cse.neu.edu.cn (Subject: LGE-LVP-Agreement).  Please send it through an academic or institute email-addresses such as xxx at xxx.edu.xx.  Requests from free email addresses (outlook, gmail, qq etc) will be kindly refused.  After confirming your information, we will send the download link to you via Email.
+You need to follow the agreement.  Usually we will reply in a week.  But sometimes the mail does not arrive and display successfully for some unknown reason.  If this happened, please change the content or title and try sending again.
+				</p>
+				<br>
+				<b>The characteristics of the data,images and patients.</b><br><br>
+			    </font>
+				
+				<font color='black'>
+				<font color='blue'><b>Data Characteristics</b></font>
+				<p>To address the above challenges, we release a benchmark dataset and propose a deep learning model to segment PEAT in cardiac SA MR images. The main contributions of our paper are given as follows.</p>
+				<ul>
+				<li>Imaging Modality: Cardiac MRI (CMR)</li>
+				<li>Scanner: 3.0T Philips Ingenia System</li>
+				<li>Scan Period: Dec 2018 - Sep 2023</li>
+				<li>Scan Location: Ren Ji Hospital, Shanghai</li>
+				<li>Contrast Protocol:
+					<ul>
+					<li>Late Gadolinium Enhancement (LGE) imaging</li>
+					<li>Contrast agent: 0.15 mmol/kg Gd-DTPA (Magnevist, Bayer)</li>
+					<li>Acquired 10 minutes post-injection</li>
+					</ul>
+				</li>
+				<li>Sequence: 2D Phase-Sensitive Inversion Recovery (PSIR)</li>
+				<li>Key Parameters:
+					<ul>
+					<li>TR/TE: 6.1/3 ms | Flip angle: 25°</li>
+					<li>FOV: 300 × 300 mm² | Slice thickness: 10 mm</li>
+					<li>Resolution: 0.89 × 0.89 mm² (reconstructed)</li>
+					</ul>
+				</li>
+				<li>Annotation:Expert-labeled MVO (Microvascular Obstruction), MI(myocardial infarction) myocardium and cavity regions.	
+				</li>
+				
+				</ul>
+				
+				<br>
+				<font color='blue'><b>Patient Characteristics</b></font>
+				<ul>
+				<li>Cohort Size: 140 STEMI (ST-segment elevation myocardial infarction) patients</li>
+				<li>Clinical Context:
+					<ul>
+					<li>All patients underwent emergency PCI (percutaneous coronary intervention)</li>
+					<li>CMR scans performed ~7 days post-PCI</li>
+					</ul>
+				</li>
+				<li>Inclusion Criteria:
+					<ul>
+					<li>Diagnosed STEMI with PCI history</li>
+					<li>Complete LGE imaging with identifiable MVO</li>
+					</ul>
+				</li>
+				<li>Ethics: Compliant with the Declaration of Helsinki</li>
+			
+				</ul>
+				</font>
+				<br><br>
+
+				<h3><b>How people can assess it?</b></h3><br>
+				<b>The ground truth annotations were generated through a rigorous multi-observer protocol to ensure reliability:</b>
+				<ul>
+				<li><b>Initial Delineation: </b>Two board-certified radiologists (with 10 years of experience in CMR) independently delineated the regions of interest using MaZda (version 4.6, Institute of Electronics, Technical University of Łódź, Poland; http://www.eletel.p.lodz.pl/mazda/), a validated software tool for medical image analysis.</li>
+				<li><b>Consensus Building:</b>After initial annotation, the two observers jointly reviewed all cases to resolve discrepancies through discussion, aiming for a unified annotation set.</li>
+				<li><b>Arbitration for Disagreements: </b>In cases where consensus could not be reached (e.g., due to ambiguous anatomical boundaries or imaging artifacts), a senior radiologist with over 20 years of domain expertise was consulted as an arbiter to adjudicate and finalize the GT.</li>
+				</ul>
+				<p>A set of	example CMR slices and corresponding annotations is listed as follows.</p>
+				<img src="img1.png" alt="必须把图片和html文件放在同一个文件夹">
+				<br><br>
+
+				<h3><b>How people can validate their results.</b></h3><br>
+				<b>Researchers can validate their results against our benchmark through the following streamlined process:</b>
+				<ul>
+					<li><b>Standardized Evaluation Pipeline:</b>We provide an evaluate.py script with pre-implemented metrics (e.g., Dice score, Hausdorff distance).
+							<ul><b>Usage Example:</b></ul>
+								<ul>bash</ul>
+								<ul>python evaluate.py \</ul>
+								<ul>--image_dir /path/to/test_images \</ul>
+								<ul>--label_dir /path/to/ground_truth \</ul>
+								<ul>--pred_dir /path/to/model_predictions</ul>
+							
+						
+					</li>	
+					<li><b>Custom Path Configuration:</b>
+						<ul><b>Users must manually specify these directory paths:</b></ul>
+							<ul>image_dir: Preprocessed test images (in our released format)</ul>
+							<ul>label_dir: Corresponding ground truth annotations</ul>
+							<ul>pred_dir: Model prediction files (should match image filename conventions)</ul>	
+					</li>	
+					<li><b>Validation Best Practices:</b>
+						<ul><b>For fair comparison:</b></ul>
+							<ul>Use our official test set split (specified in dataset.json)</ul>
+							<ul>Maintain original image resolution (0.89×0.89mm²) and orientation</ul>
+					</li>	
+					<li><b>Advanced Validation Options:</b>
+						<ul><b>The script supports:</b></ul>
+							<ul>bash</ul>
+							<ul>--metrics (-m)  # Select specific metrics</ul>
+							<ul>--output_csv    # Export quantitative results</ul>
+							<ul>--visualize     # Generate overlay comparisons</ul>
+					</li>	
+				</ul>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>
