@@ -7,12 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no">
-	<script type="text/javascript" src="../../title.js"></script>
-	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../../css/all.css" />
-	<link rel="stylesheet" href="../../css/screen.css" />
-	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
-	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+
+
 </head>
 <body>
 	<div id="wrapper">
@@ -26,12 +22,28 @@
 		<ul>
 		</br>
 		
-		<h2><font size='6px' color='#696969' align='center'><p>The plan to release the dataset</p></font></h2>
+		<h2><font size='6px' color='#696969' align='center'><p>The plan to release the LGE-LVP dataset</p></font></h2>
 		<br>	
+		<b>
+			The LGE-LVP dataset is currently under peer review as part of its companion publication. Subject to successful acceptance and final compliance checks, the full dataset is projected to be publicly released by November 2025.
+		</b>
+			<br>
+		<h3><b>Background</b></h3>
+			<p>
+				Prompt coronary reperfusion is essential in STEMI to limit infarct size (quantified by percentage of infarcted myocardium) and improve prognosis. However, microvascular obstruction (MVO) persists in 50% of cases despite successful PCI, leading to poor long-term outcomes. Late gadolinium enhancement cardiac MRI (LGE-CMR) serves as the gold standard for MVO detection, enabling precise quantification that strongly predicts adverse outcomes including LV remodeling, heart failure, and mortality. Comprehensive segmentation of LV structures (cavity, myocardium) and pathological features (MVO, infarct) from LGE-CMR provides critical prognostic information, forming the foundation for risk-adapted therapeutic strategies.
+			</p>
+				<b>Our Contributions</b>
+			<p>
+				To establish a standardized assessment baseline for MVO and infarct in STEMI patients and promote clinical translation of AI-assisted prognostic models, we release a benchmark dataset segment LV and its pathologies in LGE-CMR images. The details of the dataset are given as follows.
+			</p>
+				<br><br>
+			
 		<div class="index-wrapper" >
 			<div class="index-body" >
 				
-				<font color='black'><h3><b>How people can assess it?</b></h3><br>
+					
+				
+				<font color='black'><h3><b>How people can assess it?</b></h3>
 				<p>
 					You can download the agreement from here.  Please make sure that a permanent/long-term responsible person (e.g., professor) fills in the agreement with a handwriting signature.  After filling it, please send the electrical version to our Email: fengchaolu at cse.neu.edu.cn (Subject: LGE-LVP-Agreement).  Please send it through an academic or institute email-addresses such as xxx at xxx.edu.xx.  Requests from free email addresses (outlook, gmail, qq etc) will be kindly refused.  After confirming your information, we will send the download link to you via Email.
 You need to follow the agreement.  Usually we will reply in a week.  But sometimes the mail does not arrive and display successfully for some unknown reason.  If this happened, please change the content or title and try sending again.
@@ -42,7 +54,6 @@ You need to follow the agreement.  Usually we will reply in a week.  But sometim
 				
 				<font color='black'>
 				<font color='blue'><b>Data Characteristics</b></font>
-				<p>To address the above challenges, we release a benchmark dataset and propose a deep learning model to segment PEAT in cardiac SA MR images. The main contributions of our paper are given as follows.</p>
 				<ul>
 				<li>Imaging Modality: Cardiac MRI (CMR)</li>
 				<li>Scanner: 3.0T Philips Ingenia System</li>
@@ -90,7 +101,7 @@ You need to follow the agreement.  Usually we will reply in a week.  But sometim
 				</font>
 				<br><br>
 
-				<h3><b>How people can assess it?</b></h3><br>
+				<h3><b>How people can assess it?</b></h3>
 				<b>The ground truth annotations were generated through a rigorous multi-observer protocol to ensure reliability:</b>
 				<ul>
 				<li><b>Initial Delineation: </b>Two board-certified radiologists (with 10 years of experience in CMR) independently delineated the regions of interest using MaZda (version 4.6, Institute of Electronics, Technical University of Łódź, Poland; http://www.eletel.p.lodz.pl/mazda/), a validated software tool for medical image analysis.</li>
@@ -101,7 +112,7 @@ You need to follow the agreement.  Usually we will reply in a week.  But sometim
 				<img src="img1.png" alt="必须把图片和html文件放在同一个文件夹">
 				<br><br>
 
-				<h3><b>How people can validate their results.</b></h3><br>
+				<h3><b>How people can validate their results.</b></h3>
 				<b>Researchers can validate their results against our benchmark through the following streamlined process:</b>
 				<ul>
 					<li><b>Standardized Evaluation Pipeline:</b>We provide an evaluate.py script with pre-implemented metrics (e.g., Dice score, Hausdorff distance).
