@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="../../title.js"></script>
+	<link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../css/all.css" />
+	<link rel="stylesheet" href="../../css/screen.css" />
+	<link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" /> 
+	<link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrapper">
+		<div class="wrapper-header" style="float">
+			<header id="header">
+				<script type="text/javascript" src="../header.js"></script>
+			</header>
+		</div>
+		<div style="border:1px solid #696969"></div> 
+		<div class="project-body">
+		<ul>
+		</br>
+		
+		<h3><font size='6px' color='#696969' align='center'><p>TP-LReID: Lifelong person re-identification using text prompts</p></font></h3>
+		<br>	
+		<div class="index-wrapper" >
+			<div class="index-body" >
+				
+				<font color='black'><b>Background</b><br>
+				<p>
+					Person re-identification (ReID) aims to match identities captured by different cameras across time and locations, 
+					requiring models to maintain discrimination ability on historical (past), current (present), and unseen (future) domains. 
+					Although image-based ReID has achieved remarkable progress, recent studies demonstrate that incorporating textual information 
+					can further enhance performance, as text provides high-level semantic descriptions that are more domain-consistent than visual features (Fia. 1a). 
+					With the emergence of large-scale vision-language models such as CLIP, hybrid image–text ReID methods have shown strong performance 
+					when trained on a single present domain. However, these methods, referred to as common ReID, focus solely on fitting a static
+					 distribution and fail to handle continuously evolving data streams or generalize to unseen domains. 
+					<br>
+					To address distribution shifts over time, continual person ReID (CReID) has been proposed to incrementally learn domain-consistent 
+					representations while alleviating catastrophic forgetting through regularization and knowledge accumulation. Despite improved performance 
+					on past domains, existing CReID methods lack explicit mechanisms to enhance generalization to future unseen domains. In contrast, 
+					generalized person ReID aims to improve robustness to unseen domains using data augmentation, meta-learning, or adversarial training, 
+					but it does not model the sequential and continual nature of real-world data streams, as shown in Fig. 1b.
+					<br>
+					
+					<img src="research3_fig/fig1.png" alt="reid pic" style="display: block; margin: 0 auto; width: 483px; height: 627px;"  title="reid">
+				</p>
+				<br>
+				
+				<b>Motivation</b><br>
+				<p>
+					In this work, we bridge these paradigms by proposing a lifelong person ReID framework that leverages text prompts to 
+					guide domain-consistent feature learning across past, present, and future domains, as shown in Fig. 1c. By aligning image features with semantically 
+					stable text embeddings throughout lifelong learning and introducing style-adversarial training to simulate future domain shifts, 
+					our method simultaneously achieves performance preservation, forgetting mitigation, and generalization enhancement. 
+					This unified framework combines the strengths of common ReID, continual ReID, and generalized ReID, enabling robust identity recognition under realistic, 
+					evolving deployment scenarios.
+				</p><br>
+	
+				</font>
+				
+				<font color="F65353"><b>Our Contributions</b></font><br>
+				
+				<font color='black'><p>
+					Our method combines the advantages of common ReID, continual ReID and generalized ReID to achieve performance improvement, 
+					forgetting prevention, and generalization promotion on domains corre-sponding to present, past, and future. The main contributions are summarized as follows:
+				<ul>
+				<li>To the best of our knowledge, we are the first to propose the mechanism that smooths distribution differences with the guidance of text prompts in the lifelong person re-identification across past, present, and future domains.</li>
+				<li>Text prompts and image encoding update alternately and sequentially with the arrival order of datasets to promote each other con-tinually to ensure performance of the model on the past and present.</li>
+				<li>Future style generation is introduced to simulate unseen samples in the image embedding space, adopted as an additional regularization together with the corresponding text embeddings on training the image encoder and therefore the text prompt generator, to ensure the generalization on the future.</li>
+				</p>
+				</ul>
+				<img src="research3_fig/framework.png" 
+					alt="reid pic" 
+					style="display: block; margin: 0 auto; width: 888px; height: 595px;" 
+					title="framework">
+				<br><br>
+				
+				<b>Experiments</b>
+				<p>
+				We conduct experiments on 11 person ReID benchmarks, namely Market, CUHKSYSU, MSMT17, CUHK03, Grid, SenseReID, CUHK01, CUHK02, VIPER, iLIDS, the mean average precision (mAP) and Rank1 are used to evaluate performance on the datasets.
+				Datasets are downloaded from <a href="https://kaiyangzhou.github.io/deep-person-reid/datasets.html" target="_blank">Torchreid_Dataset_Doc</a>  and <a href="https://github.com/BJTUJia/person_reID_DualNorm" target="_blank">DualNorm</a>.
+				We compare with (1) Lifelong ReID methods: CRL, AKA, CKP, MRN, GCReID, PTKP, LSTKC, DKP, KRKC, and 𝐶2𝑅; (2) Common ReID methods: FT-RN50, BoT, FT-ViT16, TransReID, CLIP-ReID; and (3) Generalized ReID methods: QAConv, CLIP-FGDI, M3L, DGPS, and ERM-SDViT.
+				</p><br><br>
+				<img src="research3_fig/tab2.png" alt="order" style="display: block; margin: 0 auto; width:1004px;height:610px;" title="reid">
+				<br><br>
+
+				<img src="research3_fig/tab3.png" alt="order" style="display: block; margin: 0 auto; width:1050px;height:797px;" title="reid">
+				<br><br>
+
+				<img src="research3_fig/fig3.png" alt="result1" style="display: block; margin: 0 auto; width:797px;height:965px;" title="reid">
+				<br><br>
+
+				<img src="research3_fig/fig4.png" alt="result1" style="display: block; margin: 0 auto; width:720px;height:959px;" title="reid">
+				<br>		
+				
+			
+				<b>Sources</b>	
+				<ul>				
+				<li>More detials please see <a href="https://www.sciencedirect.com/science/article/pii/S0031320325009872" target="_blank">our paper.</a></li>
+				
+				<li>The code is available at <a href="https://github.com/DFLAG-NEU/TPLReID" target="_blank">TP-LReID</a>.</li>
+				<p><b>Citation</b>: The author who uses this code is defaultly considered as agreeing to cite the following reference
+					@article{liu2025tp, title={TP-LReID: Lifelong person re-identification using text prompts}, author={Liu, Zhaoshuo and Guo, Zhiwei and Feng, Chaolu and Li, Wei and Yu, Kun and Hu, Jun and Yang, Jinzhu}, journal={Pattern Recognition}, pages={112326}, year={2025}, publisher={Elsevier} }
+					}</p>
+				</ul>
+				</font>
+				<br><br>
+				
+				
+				
+			</div>		
+		</div>
+	
+		</ul>
+		</div>
+		
+		<footer id="footer">
+			<div style="border:1px solid #696969"></div> 
+			<script type="text/javascript" src="../../footer.js"></script>
+		</footer>
+	</div>
+	
+	
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/isotope.pkgd.min.js"></script>
+	<script src="../../js/cells-by-row.js"></script>
+	<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>
