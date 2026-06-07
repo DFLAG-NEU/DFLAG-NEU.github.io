@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="../../title.js"></script>
+    <link rel="stylesheet" href="../../js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/all.css" />
+    <link rel="stylesheet" href="../../css/screen.css" />
+    <link rel="shortcut icon" href="../../images/logo1.png"  type="image/x-icon" />
+    <link rel="icon" href="../../images/logo1.png" type="image/x-icon" />
+</head>
+<body>
+<div id="wrapper">
+    <div class="wrapper-header">
+        <header id="header">
+            <script type="text/javascript" src="../header.js"></script>
+        </header>
+    </div>
+    <div style="border:1px solid #696969"></div>
+    <div class="project-body">
+        <ul>
+            <br>
+
+            <h3><font size='6px' color='#696969' align='center'><p>MACE Risk Prediction in ARVC Patients via CMR: A Three-Tier Spatiotemporal Transformer with Pericardial Adipose Tissue Embedding</p></font></h3>
+            <br>
+            <div class="index-wrapper" >
+                <div class="index-body" >
+
+                    <font color='black'><b>Background</b><br>
+                        <p>
+                            Major adverse cardiac events (MACE) pose a high life-threatening risk to patients with arrhythmogenic right ventricular cardiomyopathy (ARVC), an inherited disease of the cardiac muscle. Accurate MACE risk assessment following a confirmed diagnosis of ARVC is crucial for timely intervention and personalized treatment, thereby significantly improving patient outcomes and quality of life.
+                        </p>
+                        <br>
+
+                        <center>
+                            <img src="research1_fig/Fig-1.png" alt="Factors in MACE risk assessment" style="width:500px; height:auto;" title="Factors in MACE risk assessment">
+                            <p style="color:#696969; font-size:14px;">Factors used in the comprehensive MACE risk assessment.</p>
+                        </center>
+                        <br>
+
+                        <b>Motivation & Challenges</b><br>
+                        <p>
+                            Assessing MACE risk using cardiac magnetic resonance (CMR) images faces two critical challenges:
+                            <br>
+                            1) <b>Limited dataset size</b> due to the rarity of ARVC (prevalence of only 1 in 5000 to 1 in 2000), making data for research difficult to obtain.
+                            <br>
+                            2) <b>Overlapping image distributions</b> between non-MACE and MACE patients, which show extremely similar distributions in pixel intensity, rendering them visually indistinguishable.
+                            <br><br>
+                            Fortunately, compared with non-MACE cases, MACE patients exhibit slight thickening of the pericardial adipose tissue (PAT) spatially and reduced mobility temporally, making PAT a highly valuable biomarker and prior knowledge source to enhance model performance.
+                        </p>
+                        <br>
+
+                        <center>
+                            <img src="research1_fig/Fig-2.png" alt="High similarity between MACE and non-MACE" style="width:650px; height:auto;" title="High similarity">
+                            <p style="color:#696969; font-size:14px;">High similarity between cine images of MACE and non-MACE patients.</p>
+                        </center>
+                        <br>
+                    </font>
+
+                    <font color="F65353"><b>Our Contributions</b></font><br>
+                    <font color='black'><p>
+                        To address these challenges, we develop a deep learning-based risk prediction model named <b>Three-Tier Spatiotemporal Transformer (TTST)</b>, which leverages the temporal motion patterns of PAT and the inherent spatial relationships in CMR to enhance prediction accuracy.
+                        <ul>
+                            <li><b>Dataset Release:</b> A dataset of cardiac short-axis MRI for ARVC MACE risk prediction (n = 88 patients) is released, addressing the challenge of limited availability of imaging datasets.</li>
+
+                            <li><b>Three-Tier Spatiotemporal Transformer (TTST):</b> We propose a CMR-based risk prediction model utilizing three transformer encoders to extract slice-level features and progressively aggregate them along temporal and spatial dimensions.</li>
+
+                            <li><b>PAT Embedding & Patch Voting Units:</b> We design a PAT embedding unit to integrate the dynamic and positional information of PAT as prior knowledge into the model, and a patch voting unit to refine local features guided by PAT embedding.</li>
+
+                            <li><b>Outstanding Performance:</b> The proposed model achieves effective risk prediction performance either independently (C-index = 0.744) or in combination with the existing 5-year risk score model (increasing the C-index from 0.686 to 0.777).</li>
+
+                            <br>
+                            <center>
+                                <img src="research1_fig/Fig-3.png" alt="TTST Model Architecture" style="width:800px; height:auto;" title="TTST Model Architecture">
+                                <p style="color:#696969; font-size:14px;">Overview of the proposed Three-Tier Spatiotemporal Transformer (TTST) architecture.</p>
+                            </center>
+
+                            <br>More information can be referred to our paper!
+                        </ul>
+
+                        <br><br>
+                        <b>Sources & Links</b>
+                        <ul>
+
+                            <li><b>CODE & DATASET</b></li>
+                            <p>
+                                Our open-source CODE is officially accessible here:
+                                <a href="https://github.com/DFLAG-NEU" target="_blank">https://github.com/DFLAG-NEU</a>.
+                            </p>
+
+                            <p>
+                                You can download the DATASET agreement from <a href='AgreementForCMR-ARVC.doc'>here</a>. Please make sure that a permanent/long-term responsible person (e.g., professor) fills in the agreement
+                                with a <b>handwriting signature</b>.
+                                After filling it, please send the electrical version to our Email: <b>fengchaolu@cse.neu.edu.cn (Subject: CMR-ARVC Agreement)</b>. Please send it through an academic or institute email-addresses such as xxx at xxx.edu.xx. Requests from free email addresses (outlook, gmail, qq etc) will be kindly refused.
+                                After confirming your information, we will send the download link to you via Email. You need to follow the agreement.
+                                Usually we will reply in a week. But sometimes the mail does not arrive and display successfully for some unknown reason. If this happened, please change the content or title and try sending again.
+                            </p>
+
+                        </ul>
+                        </p></font>
+                    <br><br>
+
+                </div>
+            </div>
+
+        </ul>
+    </div>
+
+    <footer id="footer">
+        <div style="border:1px solid #696969"></div>
+        <script type="text/javascript" src="../../footer.js"></script>
+    </footer>
+</div>
+
+<script src="../../js/jquery-1.11.1.min.js"></script>
+<script src="../../js/isotope.pkgd.min.js"></script>
+<script src="../../js/cells-by-row.js"></script>
+<script type="text/javascript" src="../../js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
+</body>
+</html>
